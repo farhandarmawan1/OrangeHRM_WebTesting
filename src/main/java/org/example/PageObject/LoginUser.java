@@ -12,21 +12,21 @@ public class LoginUser {
         this.driver = driver;
     }
 
-    @FindBy(xpath = "Invalid credentials")
+    @FindBy(css = "[name='username']")
     private WebElement fieldUsername;
 
     public void setFieldUsername(String userName){
         fieldUsername.sendKeys(userName);
     }
 
-    @FindBy(xpath = "//input[@name='password']")
+    @FindBy(css = "[name='password']")
     private WebElement fieldPassword;
 
     public void setFieldPassword(String password){
         fieldPassword.sendKeys(password);
     }
 
-    @FindBy(xpath = "//button[@class='oxd-button oxd-button--medium oxd-button--main orangehrm-login-button']")
+    @FindBy(css = ".oxd-button")
     private WebElement buttonLogin;
 
     public void setButtonLogin(){
